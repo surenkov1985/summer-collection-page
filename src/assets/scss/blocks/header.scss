@@ -1,0 +1,28 @@
+// header style
+
+.background {
+	position: absolute;
+	width: 100%;
+	height: 1000px;
+	top: 55px;
+	background-image: url("../../../src/assets/img/face.png");
+
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-blend-mode: overlay;
+}
+.bg-gradient {
+	position: absolute;
+	width: 100%;
+	height: 1055px;
+	max-height: 1055px;
+	top: 0;
+	//background: linear-gradient(205deg, rgba(#b27ae3, 0.8) 40%, rgba(#9e5bd9, 0.8) 59%, transparent 27%);
+	background: linear-gradient(204.7deg, #aa55f3 27%, #1100ff 59%, transparent 59%);
+	opacity: 0.5;
+	background-blend-mode: overlay;
+	transform-origin: center center;
+	//transform: rotate(25deg);
+	//background: url("../../../src/assets/img/gradient.png");
+	//background-repeat: no-repeat;
+}
