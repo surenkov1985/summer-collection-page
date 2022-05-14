@@ -6,10 +6,8 @@
 	height: 1000px;
 	top: 55px;
 	background-image: url("../../../src/assets/img/face.png");
-
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-blend-mode: overlay;
 }
 .bg-gradient {
 	position: absolute;
@@ -17,12 +15,89 @@
 	height: 1055px;
 	max-height: 1055px;
 	top: 0;
-	//background: linear-gradient(205deg, rgba(#b27ae3, 0.8) 40%, rgba(#9e5bd9, 0.8) 59%, transparent 27%);
-	background: linear-gradient(204.7deg, #aa55f3 27%, #1100ff 59%, transparent 59%);
-	opacity: 0.5;
+	background: linear-gradient(204.7deg, rgba(#aa55f3, 0.5) 27%, rgba(#1100ff, 0.5) 59%, transparent 59%);
+	//opacity: 0.5;
 	background-blend-mode: overlay;
 	transform-origin: center center;
-	//transform: rotate(25deg);
-	//background: url("../../../src/assets/img/gradient.png");
-	//background-repeat: no-repeat;
+
+
+}
+.bg-effects {
+	position: absolute;
+}
+.container {
+	padding: 80px 215px;
+	opacity: 1;
+}
+.header-container {
+	width: 100%;
+	display: flex;
+	background-blend-mode: normal;
+	justify-content: space-between;
+}
+.header-content {
+	width: (525 / 1170 * 100%);
+}
+.header-logo {
+	z-index: 5;
+
+}
+.header-button {
+	display: flex;
+	align-items: center;
+	background: #fff;
+	opacity: 1;
+	max-width: 500px;
+	border-radius: 35px;
+
+}
+.button-src {
+	display: flex;
+	align-items: center;
+	min-width: 185px;
+	background: none;
+}
+.button-array {
+	width: 10px;
+	height: 10px;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+	transform: rotate(45deg);
+
+}
+.src-icon {
+	padding: 14px 30px;
+}
+.src-desc {
+	//white-space: nowrap;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 35px;
+	border-right: 1px solid #e0e0e0;
+}
+.array {
+	padding: 27px 30px;
+}
+.button-collection {
+	min-width: 185px;
+	max-width: 250px;
+	display: flex;
+	align-items: center;
+	background: none;
+}
+.collection-desc {
+	padding-left: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	//white-space: nowrap;
+}
+h1.title {
+	font-family: "Roboto";
+	font-size: 115px;
+	line-height: 120px;
+	font-weight: 700;
+
+	.white-color {
+		color: #ffffff;
+	}
 }
