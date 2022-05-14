@@ -1,7 +1,7 @@
 {
-  "name": "webpacktemplate",
+  "name": "summer-collection-page",
   "version": "1.0.0",
-  "description": "My template + pug",
+  "description": "Single web-page by psd makeup. Pug, scss, js",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
@@ -11,24 +11,8 @@
     "> 1%",
     "last 3 version"
   ],
-  "author": "https://github.com/vedees",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vedees/webpack-template-pug.git"
-  },
-  "bugs": {
-    "url": "https://github.com/vedees/webpack-template-pug/issues"
-  },
-  "keywords": [
-    "webpack",
-    "webpack4",
-    "merge",
-    "bable",
-    "bable7",
-    "scss",
-    "pug",
-    "vue"
-  ],
+  "author": "",
+
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.6.4",
