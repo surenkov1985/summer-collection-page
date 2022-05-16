@@ -7,8 +7,8 @@
 
 html {
   line-height: $mainLineHeight;
-	font-size: $mainFontSize;
-	color: $mainFontColor;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
   height: 100%;
   @media screen and (max-width: $desktopWidth) {
 		font-size: 16px;
@@ -25,7 +25,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: $mainFont;
-	font-size: $mainFontSize;
+  font-size: $mainFontSize;
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,7 +38,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-family: "Roboto";
 }
 
 a { text-decoration: none; }
@@ -49,57 +48,178 @@ ul, li {
   list-style-type: none;
 }
 
-section, .section {
-  position: relative;
-  padding: 40px 0;
-  @media screen and (max-width: $desktopWidth) {
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 28px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 20px 0;
-  }
-}
+//section, .section {
+//  position: relative;
+//  padding: 40px 0;
+//  @media screen and (max-width: $desktopWidth) {
+//    padding: 36px 0;
+//  }
+//  @media screen and (max-width: $desktopWidth) {
+//    padding: 28px 0;
+//  }
+//  @media screen and (max-width: $desktopWidth) {
+//    padding: 20px 0;
+//  }
+//}
 
 .wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 auto;
   max-width: $containerWidth;
-  min-height: 100vh;
   position: relative;
+}
+
+.trend {
+  width: 1380px;
+  padding: 75px 100px 130px;
+  background: #ffffff;
+  box-shadow: 5px 5px 50px 5px rgba(237, 235, 253, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 65px;
+}
+.trend-title {
+  font-size: 50px;
+  max-width: 900px;
+  .title {
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+  }
+}
+.trend-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 60px;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //row-gap: 20px;
+  justify-content: space-between;
+  padding: 56px 30px;
+  position: relative;
+  transition: all .2s;
+
+  &:hover {
+    box-shadow: 5px 5px 50px 5px rgba(202, 236, 247, 0.7);
+    padding-bottom: 66px;
+    padding-top: 46px;
+  }
+  &:hover>button, &:hover>.likes, &:hover>.commits {
+    //display: block;
+    opacity: 1;
+    transition: all .2s;
+  }
+  &:hover>.product-price {
+    color: #8c84f9;
+  }
+}
+.product-img {
+  width: 245px;
+  height: 245px;
+  //background-repeat: no-repeat;
+  //background-size: contain;
+  //background-position: center center;
+  //background-repeat: no-repeat;
+  img {
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+  }
+}
+.product-name {
+  text-align: center;
+  color: #777777;
+  margin-top: 33px;
+}
+.product-price {
+  text-align: center;
+  color: #333333;
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.add-to-cart {
+  //display: none;
+  opacity: 0;
+  position: absolute;
+  height: 60px;
+  min-width: 100px;
+  max-width: 250px;
+  padding: 0 50px;
+  border-radius: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 20px;
+  color: #ffffff;
+  background: linear-gradient(64deg, rgb(140, 132, 249), rgb(161, 101, 244) 100%);
+  bottom: -30px;
+  cursor: pointer;
+  box-shadow: 5px 5px 25px 5px rgba(240, 239, 254, 0.7);
 }
 
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  //min-height: 100vh;
 }
-header {
-  width: 100%;
-  position: relative;
+.likes {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bbbbbb;
+  font-size: 14px;
+  column-gap: 5px;
+  cursor: pointer;
+}
+.likes-icon {
+  width: 20px;
+  height: 20px;
+}
+.active  {
+  fill: #f96290;
+  stroke: #f96290;
+}
+.commits {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bbbbbb;
+  font-size: 14px;
+  column-gap: 5px;
+  cursor: pointer;
 }
 
-.container {
-  //width: 100%;
-  flex: 0 0 auto;
-  display: flex;
-  //position: relative;
-  margin: 0 auto;
-  //max-width: $desktopWidth;
-  //@media screen and (max-width: $DesktopWidth) {
-  //  //max-width: $tableWidth;
-  //  width: 100%;
-  //}
-  @media screen and (max-width: $tableWidth) {
-    //max-width: $phoneWidth;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    //max-width: $smPhoneWidth;
-  }
-}
+
+
+
+//.container {
+//  @media screen and (max-width: $tableWidth) {
+//    //max-width: $phoneWidth;
+//  }
+//  @media screen and (max-width: $phoneWidth) {
+//    //max-width: $smPhoneWidth;
+//  }
+//}
 
 // Modules
 // @import "modules/my-module.scss";
