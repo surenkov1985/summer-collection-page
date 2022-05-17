@@ -43,9 +43,9 @@ header {
 	margin: 0 auto;
 	opacity: 1;
 	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	row-gap: 185px;
+	//flex-direction: column;
+	//align-items: flex-end;
+	//row-gap: 185px;
 
 	@media screen and (max-width: $desktopWidth) {
 		//max-width: $tableWidth;

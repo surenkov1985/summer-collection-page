@@ -1,0 +1,45 @@
+.social-list {
+	display: flex;
+	justify-content: center;
+	column-gap: 30px;
+}
+.social-item {
+	width: 55px;
+	height: 55px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #ecebed;
+	border-radius: 50%;
+	transition: all .2s;
+	cursor: pointer;
+
+	a {
+		width: 25px;
+		height: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	a > svg {
+		width: 25px;
+		height: 20px;
+
+
+		& path {
+			fill: #555555;
+			transition: all .2s;
+		}
+
+	}
+
+	&:hover {
+		background: #917df8;
+		border-color: #917df8;
+
+		svg path {
+			fill: #ffffff;
+		}
+	}
+}

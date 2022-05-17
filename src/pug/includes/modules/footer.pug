@@ -1,2 +1,23 @@
-footer
-  //.container
+- var footerMenu = [{link: "", value: "Man"}, {link: "", value: "Woman"}, {link: "", value: "Kids"}, {link: "", value: "Bags"}, {link: "", value: "Watches"}, {link: "", value: "Toys"}];
+- var socialIcons = ["../assets/svg/facebook.svg"]
+
+footer#foot
+	.newsletter
+		.back
+		.newsletter-content
+			.newsletter-title
+				h2.title Newsletter
+				.back-title GET NOTIFIED
+			.email-input
+				input(type="email" autocomplete="on" placeholder="Enter your email address..").email
+				button.email-btn Submit
+	.foot-content
+		.foot-title
+			h2.title Big Shop
+		nav.foot-categories
+			ul.categories-list
+				for item in footerMenu
+					li.categories-item
+						a(href= item.link)= item.value
+		include social
+	.copyright &#xA9; Copyright 2017. Big Shop by Victor Themes.

@@ -1,1 +1,141 @@
 // footer style
+
+#foot {
+	width: 100%;
+
+}
+
+.newsletter {
+	width:  100%;
+	height: 420px;
+	position: relative;
+
+
+}
+.back {
+	width: 100%;
+	height: 490px;
+	position: absolute;
+	top: -75px;
+	background: linear-gradient(225deg, rgb(161, 101, 244), rgb(140, 132, 249) 100%);
+	z-index: -1;
+}
+.newsletter-content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 85px;
+}
+.newsletter-title {
+	position: relative;
+	width: 100%;
+
+	.title {
+		font-size: 50px;
+		//width: 100%;
+		font-weight: 600;
+		color: #ffffff;
+		text-align: center;
+
+	}
+	.back-title {
+		//font-family: "Miriad Pro";
+		width: 100%;
+		font-size: 150px;
+		line-height: 100%;
+		font-weight: 900;
+		color: #ffffff;
+		opacity: 0.1;
+		position: absolute;
+		text-align: center;
+		top: -50%;
+	}
+}
+.email-input {
+	width: 845px;
+	height: 75px;
+	border-radius: 40px;
+	background: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	padding: 6px 6px 6px 23px;
+	font-size: 20px;
+
+	font-family: "Open Sans";
+}
+
+.email {
+	font-family: "Open Sans";
+	width: 80%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	&:focus::-webkit-input-placeholder {
+		color: transparent;
+	}
+}
+.email-btn {
+	font-family: "Open Sans";
+	font-weight: 500;
+	color: #ffffff;
+	background: linear-gradient(237deg, rgb(161, 101, 244), rgb(140, 132, 249) 100%);
+	min-width: 200px;
+	max-width: 350px;
+	border-radius: 35px;
+	padding: 13px 40px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.foot-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 50px;
+	padding-top: 75px;
+	padding-bottom: 50px;
+}
+.categories-list {
+	display: flex;
+	justify-content: center;
+	column-gap: 50px;
+}
+.categories-item {
+	a {
+		font-size: 18px;
+		font-weight: 600;
+		color: #404040;
+
+		&:hover {
+			color: #917df8;
+		}
+	}
+}
+.foot-title {
+
+	.title {
+		font-family: "Roboto";
+		font-size: 40px;
+		font-weight: 500;
+	}
+}
+.copyright {
+	width: 100%;
+	height: 65px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 400;
+	color: #777777;
+	background: #f6f5f7;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Montserrat";
+}
+
