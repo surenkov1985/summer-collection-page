@@ -1,19 +1,19 @@
 - var footerMenu = [{link: "", value: "Man"}, {link: "", value: "Woman"}, {link: "", value: "Kids"}, {link: "", value: "Bags"}, {link: "", value: "Watches"}, {link: "", value: "Toys"}];
-- var socialIcons = ["../assets/svg/facebook.svg"]
+
 
 footer#foot
 	.newsletter
 		.back
 		.newsletter-content
 			.newsletter-title
-				h2.title Newsletter
+				p.title Newsletter
 				.back-title GET NOTIFIED
-			.email-input
+			form(action="" method="post" target="blank").email-input
 				input(type="email" autocomplete="on" placeholder="Enter your email address..").email
-				button.email-btn Submit
+				input(type="submit" value="Submit").email-btn
 	.foot-content
 		.foot-title
-			h2.title Big Shop
+			p.title Big Shop
 		nav.foot-categories
 			ul.categories-list
 				for item in footerMenu

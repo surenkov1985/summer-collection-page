@@ -1,7 +1,7 @@
 extends ../layout/main
 
 block variables
-	- var title = 'Webpack + Pug';
+	- var title = 'Big Shop - Summer Collection';
 	- var description = 'Description for Webpack + Pug';
 	- var pageClass = 'index-page';
 	- var bugsList = [{class: "active", name: "Black Genuine Leather Bags", image: "../assets/img/bags/black-genuine.png", link: " ", price: "23.20"}, {class: "active", name: "Fashion Red Leather Bags", image: "../assets/img/bags/fashion-red.png", link: " ", price: "20.16"}, {class: "active", name: "Fashion Genuine Leather Bags", image: "../assets/img/bags/fashion-genuine.png", link: " ", price: "30.14"}, {class: "active", name: "Simply Leather Bags", image: "../assets/img/bags/simply-leather.png", link: " ", price: "15.20"}, {class: "active", name: "New Fashion Leather Bags", image: "../assets/img/bags/new-fashion.png", link: " ", price: "25.20"}, {class: "active", name: "Simple Hand Model Bags", image: "../assets/img/bags/simple-hand.png", link: " ", price: "17.6"}];
@@ -12,15 +12,15 @@ block variables
 block contentBags
 	section#trendly-bags.trend
 		.trend-title
-			h3.title Trendy Arrivals
-		.trend-content
+			h2.title Trendy Arrivals
+		.trend-content-bags
 			for item in bugsList
 				article.product-card
 					.product-img
 						img(src= item.image alt= item.name)
-					p.product-name= item.name
+					h3.product-name= item.name
 					p.product-price= "$ " + item.price
-					button.add-to-cart Add to Cart
+					button.add-to-cart.scale-animation Add to Cart
 					div(class= item.class).likes
 						div(class= item.class).likes-icon
 							<?xml version="1.0" encoding="iso-8859-1"?>
@@ -29,36 +29,7 @@ block contentBags
 							<g>
 							<path d="M433.601,67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7,13.6-92.4,38.3l-12.9,12.9l-13.1-13.1 c-24.7-24.7-57.6-38.4-92.5-38.4c-34.8,0-67.6,13.6-92.2,38.2c-24.7,24.7-38.3,57.5-38.2,92.4c0,34.9,13.7,67.6,38.4,92.3 l187.8,187.8c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-3.9l188.2-187.5c24.7-24.7,38.3-57.5,38.3-92.4 C471.801,124.501,458.301,91.701,433.601,67.001z M414.401,232.701l-178.7,178l-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3 s10.7-53.7,30.3-73.2c19.5-19.5,45.5-30.3,73.1-30.3c27.7,0,53.8,10.8,73.4,30.4l22.6,22.6c5.3,5.3,13.8,5.3,19.1,0l22.4-22.4 c19.6-19.6,45.7-30.4,73.3-30.4c27.6,0,53.6,10.8,73.2,30.3c19.6,19.6,30.3,45.6,30.3,73.3 C444.801,187.101,434.001,213.101,414.401,232.701z"/>
 							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
+
 							</svg>
 						.likes-numb 253
 					.commits
@@ -67,6 +38,15 @@ block contentBags
 							<image id="Vector_Smart_Object" data-name="Vector Smart Object" width="25" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAVCAYAAACzK0UYAAABA0lEQVRIiZ2UbQ3CQAyGn5EJmAQk4ACQgALAAgYABUhACkiYAH5MAD9wALnkRrK299E9ybKsd723ad9bc3q9v8znCWxL2W18f4BerebZZFcNkb6mIsEFGFTUoBUhq7rQkhXQGfFUzgQp8lA7oAFunvaURK5qh29dsgeWUuSitvnWJWtLxLJzI76X8Skxzky161lIDByAs4pq/sVJkRob1xQyYRTpMu6Rhw5GjNyFHkVWCftizCTVruQvpq2wrXWYRfL2txW2tURSQiZy8B662OYcHTNE7jHxWJjjBK/IIbqIOIOqec5p1y4KfWrnuVCRPKFy92X0iITDvU50iYTWhDb5AX6W6CsbfkUnrQAAAABJRU5ErkJggg=="/>
 							</svg>
 						.commits-numb 120
+		.triangle-shape.decor
+		.green-line-shape.decor
+		.violet-line-shape.decor
+		.violet-medium-ring.decor
+		.violet-quad-shape.decor
+		.violet-quad-large.decor
+		.triangle-light-shape.decor
+
+
 
 block brands-presentation
 	section#presentation.presentation
@@ -74,10 +54,10 @@ block brands-presentation
 			.presentation-container
 				.presentation-desc
 					.presentation-title
-						h3.title Our Brands
+						h2.title Our Brands
 
 					.brand-title
-						h4 Small Shoes 2017 new Arrivals  mini Messenger
+						h3 Small Shoes 2017 new Arrivals  mini Messenger
 							a(href="#")  Classic Shoes
 					.brand-desc
 						p In porttitor elit ac mi placerat hendrerit. Morbi accumsan, erat in ullamcorper consectetur, nisi erat efficitur eros, sagittis tristique odio turpis vitae dui. Vestibulum gravida est ut erat pretium, non pretium diam feugiat. Integer egestas suscipit lorem ac fermentum. Integer at mauris vitae justo sagittis dapibus. Pellentesque sit amet nisl vitae orci vehicula faucibus. Fusce et lat, feugiat est.
@@ -85,76 +65,27 @@ block brands-presentation
 					//img(src="../assets/img/phone.png")
 					.bg-circle
 					.bg-img
+			.blue-line-shape.decor
+			.violet-line-shape.decor
+			.triangle-light.decor
 
 block contentWatch
 	section#trendly-watch.trend
 		.trend-title
-			h3.title Our Showcase
+			h2.title Our Showcase
 		nav.showcase-nav
 			ul.showcase-list
 				for key in showcaseCategories
-					li.showcase-item
-						a(class=key.class href="")=key.name
-
-		.trend-content
-			for item in watchList
-				article.product-card
-					.product-img
-						img(src= item.image alt= item.name)
-					p.product-name= item.name
-					p.product-price= "$ " + item.price
-					button.add-to-cart Add to Cart
-					div(class= item.class).likes
-						div(class= item.class).likes-icon
-							<?xml version="1.0" encoding="iso-8859-1"?>
-							<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 471.701 471.701" style="enable-background:new 0 0 471.701 471.701;" xml:space="preserve">
-							<g>
-							<path d="M433.601,67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7,13.6-92.4,38.3l-12.9,12.9l-13.1-13.1 c-24.7-24.7-57.6-38.4-92.5-38.4c-34.8,0-67.6,13.6-92.2,38.2c-24.7,24.7-38.3,57.5-38.2,92.4c0,34.9,13.7,67.6,38.4,92.3 l187.8,187.8c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-3.9l188.2-187.5c24.7-24.7,38.3-57.5,38.3-92.4 C471.801,124.501,458.301,91.701,433.601,67.001z M414.401,232.701l-178.7,178l-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3 s10.7-53.7,30.3-73.2c19.5-19.5,45.5-30.3,73.1-30.3c27.7,0,53.8,10.8,73.4,30.4l22.6,22.6c5.3,5.3,13.8,5.3,19.1,0l22.4-22.4 c19.6-19.6,45.7-30.4,73.3-30.4c27.6,0,53.6,10.8,73.2,30.3c19.6,19.6,30.3,45.6,30.3,73.3 C444.801,187.101,434.001,213.101,414.401,232.701z"/>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							<g>
-							</g>
-							</svg>
-						.likes-numb 253
-					.commits
-						.commits-icon
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="21" viewBox="0 0 25 21">
-							<image id="Vector_Smart_Object" data-name="Vector Smart Object" width="25" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAVCAYAAACzK0UYAAABA0lEQVRIiZ2UbQ3CQAyGn5EJmAQk4ACQgALAAgYABUhACkiYAH5MAD9wALnkRrK299E9ybKsd723ad9bc3q9v8znCWxL2W18f4BerebZZFcNkb6mIsEFGFTUoBUhq7rQkhXQGfFUzgQp8lA7oAFunvaURK5qh29dsgeWUuSitvnWJWtLxLJzI76X8Skxzky161lIDByAs4pq/sVJkRob1xQyYRTpMu6Rhw5GjNyFHkVWCftizCTVruQvpq2wrXWYRfL2txW2tURSQiZy8B662OYcHTNE7jHxWJjjBK/IIbqIOIOqec5p1y4KfWrnuVCRPKFy92X0iITDvU50iYTWhDb5AX6W6CsbfkUnrQAAAABJRU5ErkJggg=="/>
-							</svg>
-						.commits-numb 120
-
-block script
-	script(type='text/javascript').
-		const foo = true;
-		let bar = function() {};
-		if (foo) {
-			bar(1 + 5)
-		}
+					li(class=key.class).showcase-item
+						.category= key.name
+		include ../includes/showcase/fashion
+		include ../includes/showcase/furnitures
+		include ../includes/showcase/watch
+		include ../includes/showcase/mobile
+		include ../includes/showcase/cloth
+		include ../includes/showcase/toys
+		.triangle-shape-show.decor
+		.yellow-line-shape.decor
+		.violet-quad-light.decor
+		.triangle-small-shape.decor
+		.violet-small-ring.decor

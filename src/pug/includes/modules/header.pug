@@ -1,28 +1,42 @@
+- var dropMenu = [{link: "", value: "Man"}, {link: "", value: "Woman"}, {link: "", value: "Kids"}, {link: "", value: "Bags"}, {link: "", value: "Watches"}, {link: "", value: "Toys"}];
+
 header
+  div.bg-image
+    img(src="../assets/img/face.png")
   .background
-    div.bg-image
+    //div.bg-image
+    //  img(src="../assets/img/face.png")
     div.bg-gradient
     div.bg-effects
       img(src="../assets/img/gradient-effect.png")
+    .bg-ring.decor
+    .bg-quad.decor
+      //img(src="../assets/img/quad-shape.png")
   .container
     .header-container
-      .header-logo
-        h1.logo Big Shop
-      .buttons
-        .header-button
-          div.src-icon
-            img(src="../assets/img/search-icon.png")
-          input(type="search", placeholder="Search").button-src
-          button.button-collection
-            .collection-desc Collection
-            .array
-              .button-array
+      .header-logo-row
+        .header-logo
+          p.logo Big Shop
+        .buttons
+          .header-button
+            form(action="" method="post" target="_blank").source
+              input(type="image" src="../assets/img/search-icon.png").src-icon
+              input(type="search", placeholder="Search").button-src
+            button.button-collection
+              .collection-desc Collection
+              .array
+                .button-array
+              .drop-menu
+                ul.drop-list
+                  for key in dropMenu
+                    li.drop-item
+                      a(href= key.link).link= key.value
       .header-content
         .header-title
           h1.title
             span.black-color Summer
             span.white-color  Collection
-          h3.sale
+          p.sale
             span.yellow-color 25%
             span.white-color  OFF
         button.details

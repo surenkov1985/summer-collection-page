@@ -11,32 +11,47 @@
 	align-items: center;
 	border: 1px solid #ecebed;
 	border-radius: 50%;
-	transition: all .2s;
+	transition: all $transitionTime;
 	cursor: pointer;
 
 	a {
-		width: 25px;
-		height: 25px;
+		width: 35px;
+		height: 30px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 
 	a > svg {
-		width: 25px;
-		height: 20px;
-
 
 		& path {
 			fill: #555555;
-			transition: all .2s;
+			transition: all $transitionTime;
 		}
 
 	}
+	#facebook > svg {
+		width: 25px;
+		height: 23px;
+	}
+	#google-plus > svg {
+		width: 35px;
+		height: 30px;
+	}
+	#instagram > svg {
+		width: 23px;
+		height: 22px;
+	}
+	#twitter > svg{
+		width: 22px;
+		height: 22px;
+	}
 
 	&:hover {
-		background: #917df8;
+		background: linear-gradient(237deg, rgb(161, 101, 244), rgb(140, 132, 249) 100%);
+		box-shadow: 0px 8px 19px 1px rgba(207, 207, 208, 0.75);
 		border-color: #917df8;
+		transform: scale(1.1);
 
 		svg path {
 			fill: #ffffff;

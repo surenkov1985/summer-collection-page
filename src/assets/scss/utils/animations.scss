@@ -1,0 +1,67 @@
+.scale-animation {
+	transform: scale(0.1);
+}
+
+.product-card:hover>.scale-animation{
+	animation: scale-up $animationTime cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+@keyframes scale-up {
+	from {
+		transform: scale(0.1);
+	}
+	to {
+		transform: scale(0.8);
+	}
+}
+
+.scale-drop {
+	transform-origin: top;
+	animation: scale-drop-menu .15s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+@keyframes scale-drop-menu {
+
+	from {
+		transform: scaleY(0);
+	}
+	to {
+		transform: scaleY(1);
+	}
+
+}
+
+.scale-left {
+	transform-origin: left;
+	animation: scale-off .5s linear both;
+}
+
+@keyframes scale-off {
+	from {
+		transform: scaleX(1);
+	}
+	to {
+		transform: scaleX(0);
+	}
+}
+
+.scale-right {
+	transform-origin: right;
+	animation: scale-on .5s linear both;
+}
+
+@keyframes scale-on {
+	from {
+		transform: scaleX(0);
+	}
+	to {
+		transform: scaleX(1);
+	}
+}
+
+.on {
+	display: grid;
+}
+.off {
+	display: none;
+}
