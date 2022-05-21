@@ -1,82 +1,63 @@
 // Main js file
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
+import jquery from 'jquery';
+import $ from 'jquery';
 
-window.addEventListener("DOMContentLoaded", function () {
+$(document).ready(function () {
 
-	const buttonCollection = document.querySelector(".button-collection");
-	const dropMenu = document.querySelector(".drop-menu");
-	let element;
+	$(".button-collection").on("click", function (event) {
 
-	buttonCollection.addEventListener("click", function () {
+		event.stopPropagation();
 
-		if (dropMenu.classList.contains("scale-drop")) {
-		
-			dropMenu.classList.remove("scale-drop");
-		} else {
-		
-			dropMenu.classList.add("scale-drop");
-		}
+		$(".drop-menu").toggleClass("scale-drop");
 	});
-	document.addEventListener("click", function (e) {
 
-		element = e.target;
+	$(window).on('click', () => {
+		$(".drop-menu").removeClass("scale-drop");
+	});
 
-		if(buttonCollection !== element && !buttonCollection.contains(element)) {
-
-			dropMenu.classList.remove("scale-drop");
-		}
-
-	})
 
 	//////////////////////////////////////////////////////
 
-	const productsCategory = document.querySelectorAll(".trend-content");
-	const showcaseCategories = document.querySelectorAll(".showcase-item");
-	const activeCategorie = "active";
-	let selectedCategory;
-	let activatedCategorie;
-	let selectElement;
+	function onCategory(elem) {
 
-	function deleteActiveClass () {
+		$(".showcase-item").each((index, categorie) => {
 
-		showcaseCategories.forEach((categorie) => {
-			categorie.classList.remove("active")
+			if($(categorie).data("watch-tab-id") === elem){
+
+				$(categorie).addClass("active");
+
+			} else {
+
+				$(categorie).removeClass("active");
+			}
 		});
 
-	}
+		$(".trend-content").each((index, categorie) => {
 
-	function offCategory () {
+			if ($(categorie).attr("id") === elem) {
 
-		productsCategory.forEach((categorie) => {
+				$(categorie).removeClass("off").addClass("on");
 
-			categorie.classList.remove("on")
+			} else {
 
-			if (!categorie.classList.contains("off")) {
-				categorie.classList.add("off")
+				$(categorie).removeClass("on").addClass("off");
 			}
 		});
 	}
 
-	function onCategory (elem) {
+	onCategory("watches");
 
-		elem.classList.remove("off");
-		elem.classList.add("on");
-	}
+	$(".showcase-item").each((index, elem) => {
+		
+		$(elem).on("click", function() {
 
-	showcaseCategories.forEach((categorie) => categorie.addEventListener("click", function (e) {
+			const tabId = $(this).data("watch-tab-id");
 
-		selectElement = this.querySelector(".category");
-		selectedCategory = selectElement.innerHTML.toLowerCase();
-		activatedCategorie = document.querySelector("." + selectedCategory);
-
-
-		deleteActiveClass();
-		offCategory();
-		onCategory(activatedCategorie);
-
-		this.classList.add("active");
-
-	}))
+			onCategory(tabId);
+	
+		});
+	});
 
 
 });

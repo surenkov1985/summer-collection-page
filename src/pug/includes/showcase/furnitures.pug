@@ -1,6 +1,7 @@
-- var furnituresList = [{class: "active", name: "Furnitures product one", image: "../assets/img/furnitures/furnitures-blank-1.png", price: "25.36"}, {class: "active", name: "Furnitures product two", image: "../assets/img/furnitures/furnitures-blank-2.png", price: "35.24"}, {class: "active", name: "Furnitures product three", image: "../assets/img/furnitures/furnitures-blank-3.png", price: "23.12"}, {class: "active", name: "Furnitures product four", image: "../assets/img/furnitures/furnitures-blank-4.png", price: "42.32"}, {class: "active", name: "Furnitures product five", image: "../assets/img/furnitures/furnitures-blank-5.png", price: "15.20"}, {class: "active", name: "Furnitures product six", image: "../assets/img/furnitures/furnitures-blank-6.png", price: "36.12"}];
+- var furnituresList = [{class: "active", name: "Furnitures product one", image: "/assets/img/furnitures/furnitures-blank-1.png", price: "25.36"}, {class: "active", name: "Furnitures product two", image: "/assets/img/furnitures/furnitures-blank-2.png", price: "35.24"}, {class: "active", name: "Furnitures product three", image: "/assets/img/furnitures/furnitures-blank-3.png", price: "23.12"}, {class: "active", name: "Furnitures product four", image: "/assets/img/furnitures/furnitures-blank-4.png", price: "42.32"}, {class: "active", name: "Furnitures product five", image: "/assets/img/furnitures/furnitures-blank-5.png", price: "15.20"}, {class: "active", name: "Furnitures product six", image: "/assets/img/furnitures/furnitures-blank-6.png", price: "36.12"}];
+- var category = "furnitures";
 
-.trend-content.furnitures.off
+div(id= category).trend-content.off
 	for item in furnituresList
 		article.product-card
 			.product-img

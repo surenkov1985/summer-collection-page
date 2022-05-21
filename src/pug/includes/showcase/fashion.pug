@@ -1,6 +1,7 @@
-- var fashionList = [{class: "active", name: "Fashion product one", image: "../assets/img/fashion/fashion-blank-1.png", price: "25.36"}, {class: "active", name: "Fashion product two", image: "../assets/img/fashion/fashion-blank-2.png", price: "35.24"}, {class: "active", name: "Fashion product three", image: "../assets/img/fashion/fashion-blank-3.png", price: "23.12"}, {class: "active", name: "Fashion product four", image: "../assets/img/fashion/fashion-blank-4.png", price: "42.32"}, {class: "active", name: "Fashion product five", image: "../assets/img/fashion/fashion-blank-5.png", price: "15.20"}, {class: "active", name: "Fashion product six", image: "../assets/img/fashion/fashion-blank-6.png", price: "36.12"}];
+- var fashionList = [{class: "active", name: "Fashion product one", image: "/assets/img/fashion/fashion-blank-1.png", price: "25.36"}, {class: "active", name: "Fashion product two", image: "/assets/img/fashion/fashion-blank-2.png", price: "35.24"}, {class: "active", name: "Fashion product three", image: "/assets/img/fashion/fashion-blank-3.png", price: "23.12"}, {class: "active", name: "Fashion product four", image: "/assets/img/fashion/fashion-blank-4.png", price: "42.32"}, {class: "active", name: "Fashion product five", image: "/assets/img/fashion/fashion-blank-5.png", price: "15.20"}, {class: "active", name: "Fashion product six", image: "/assets/img/fashion/fashion-blank-6.png", price: "36.12"}];
+- var category = "fashion";
 
-.trend-content.fashion.off
+div(id= category).trend-content.off
 	for item in fashionList
 		article.product-card
 			.product-img

@@ -4,9 +4,9 @@ block variables
 	- var title = 'Big Shop - Summer Collection';
 	- var description = 'Description for Webpack + Pug';
 	- var pageClass = 'index-page';
-	- var bugsList = [{class: "active", name: "Black Genuine Leather Bags", image: "../assets/img/bags/black-genuine.png", link: " ", price: "23.20"}, {class: "active", name: "Fashion Red Leather Bags", image: "../assets/img/bags/fashion-red.png", link: " ", price: "20.16"}, {class: "active", name: "Fashion Genuine Leather Bags", image: "../assets/img/bags/fashion-genuine.png", link: " ", price: "30.14"}, {class: "active", name: "Simply Leather Bags", image: "../assets/img/bags/simply-leather.png", link: " ", price: "15.20"}, {class: "active", name: "New Fashion Leather Bags", image: "../assets/img/bags/new-fashion.png", link: " ", price: "25.20"}, {class: "active", name: "Simple Hand Model Bags", image: "../assets/img/bags/simple-hand.png", link: " ", price: "17.6"}];
-	- var showcaseCategories = [{name:"Fashion", class: ""}, {name:"Furnitures", class: ""}, {name:"Watches", class: "active"}, {name:"Mobile", class: ""}, {name:"Cloth", class: ""}, {name:"Toys", class: ""}]
-	- var watchList = [{class: "active", name: "Fashion Genuine Chain Watch", image: "../assets/img/watch/fashion-genuine-chain.png", tab: "../assets/img/watch/fashion-genuine-chain-tab.png", link: " ", price: "25.36"}, {class: "active", name: "Fashion Silver Chain Watch", image: "../assets/img/watch/fashion-silver-chain.png", link: " ", price: "35.24"}, {class: "active", name: "Fashion Chain Watch", image: "../assets/img/watch/fashion-chain.png", link: " ", price: "23.12"}, {class: "active", name: "Fashion Black Chain Watch", image: "../assets/img/watch/fashion-black-chain.png", link: " ", price: "42.32"}, {class: "active", name: "Fashion Lether Watch", image: "../assets/img/watch/fashion-lether.png", link: " ", price: "15.20"}, {class: "active", name: "Fashion Forign Watch", image: "../assets/img/watch/fashion-forign.png", tab: "../assets/img/watch/fashion-forign-tab.png", link: " ", price: "36.12"}];
+	- var bugsList = [{class: "active", name: "Black Genuine Leather Bags", image: "/assets/img/bags/black-genuine.png", link: " ", price: "23.20"}, {class: "active", name: "Fashion Red Leather Bags", image: "/assets/img/bags/fashion-red.png", link: " ", price: "20.16"}, {class: "active", name: "Fashion Genuine Leather Bags", image: "/assets/img/bags/fashion-genuine.png", link: " ", price: "30.14"}, {class: "active", name: "Simply Leather Bags", image: "/assets/img/bags/simply-leather.png", link: " ", price: "15.20"}, {class: "active", name: "New Fashion Leather Bags", image: "/assets/img/bags/new-fashion.png", link: " ", price: "25.20"}, {class: "active", name: "Simple Hand Model Bags", image: "/assets/img/bags/simple-hand.png", link: " ", price: "17.6"}];
+	- var showcaseCategories = [{data: "fashion", name:"Fashion", class: ""}, {data: "furnitures", name:"Furnitures", class: ""}, {data: "watches", name:"Watches", class: "active"}, {data: "mobile", name:"Mobile", class: ""}, {data: "cloth", name:"Cloth", class: ""}, {data: "toys", name:"Toys", class: ""}]
+	- var watchList = [{class: "active", name: "Fashion Genuine Chain Watch", image: "/assets/img/watch/fashion-genuine-chain.png", tab: "/assets/img/watch/fashion-genuine-chain-tab.png", link: " ", price: "25.36"}, {class: "active", name: "Fashion Silver Chain Watch", image: "/assets/img/watch/fashion-silver-chain.png", link: " ", price: "35.24"}, {class: "active", name: "Fashion Chain Watch", image: "/assets/img/watch/fashion-chain.png", link: " ", price: "23.12"}, {class: "active", name: "Fashion Black Chain Watch", image: "/assets/img/watch/fashion-black-chain.png", link: " ", price: "42.32"}, {class: "active", name: "Fashion Lether Watch", image: "/assets/img/watch/fashion-lether.png", link: " ", price: "15.20"}, {class: "active", name: "Fashion Forign Watch", image: "/assets/img/watch/fashion-forign.png", tab: "/assets/img/watch/fashion-forign-tab.png", link: " ", price: "36.12"}];
 
 
 block contentBags
@@ -62,7 +62,7 @@ block brands-presentation
 					.brand-desc
 						p In porttitor elit ac mi placerat hendrerit. Morbi accumsan, erat in ullamcorper consectetur, nisi erat efficitur eros, sagittis tristique odio turpis vitae dui. Vestibulum gravida est ut erat pretium, non pretium diam feugiat. Integer egestas suscipit lorem ac fermentum. Integer at mauris vitae justo sagittis dapibus. Pellentesque sit amet nisl vitae orci vehicula faucibus. Fusce et lat, feugiat est.
 				.presentation-img
-					//img(src="../assets/img/phone.png")
+					//- img(src="/assets/img/phone.png")
 					.bg-circle
 					.bg-img
 			.blue-line-shape.decor
@@ -76,7 +76,7 @@ block contentWatch
 		nav.showcase-nav
 			ul.showcase-list
 				for key in showcaseCategories
-					li(class=key.class).showcase-item
+					li(class=key.class data-watch-tab-id= key.data).showcase-item
 						.category= key.name
 		include ../includes/showcase/fashion
 		include ../includes/showcase/furnitures

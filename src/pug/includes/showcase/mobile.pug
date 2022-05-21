@@ -1,6 +1,7 @@
-- var mobileList = [{class: "active", name: "Mobile product one", image: "../assets/img/mobile/mobile-blank-1.png", price: "25.36"}, {class: "active", name: "Mobile product two", image: "../assets/img/mobile/mobile-blank-2.png", price: "35.24"}, {class: "active", name: "Mobile product three", image: "../assets/img/mobile/mobile-blank-3.png", price: "23.12"}, {class: "active", name: "Mobile product four", image: "../assets/img/mobile/mobile-blank-4.png", price: "42.32"}, {class: "active", name: "Mobile product five", image: "../assets/img/mobile/mobile-blank-5.png", price: "15.20"}, {class: "active", name: "Mobile product six", image: "../assets/img/mobile/mobile-blank-6.png", price: "36.12"}];
+- var mobileList = [{class: "active", name: "Mobile product one", image: "/assets/img/mobile/mobile-blank-1.png", price: "25.36"}, {class: "active", name: "Mobile product two", image: "/assets/img/mobile/mobile-blank-2.png", price: "35.24"}, {class: "active", name: "Mobile product three", image: "/assets/img/mobile/mobile-blank-3.png", price: "23.12"}, {class: "active", name: "Mobile product four", image: "/assets/img/mobile/mobile-blank-4.png", price: "42.32"}, {class: "active", name: "Mobile product five", image: "/assets/img/mobile/mobile-blank-5.png", price: "15.20"}, {class: "active", name: "Mobile product six", image: "/assets/img/mobile/mobile-blank-6.png", price: "36.12"}];
+- var category = "mobile";
 
-.trend-content.mobile.off
+div(id= category).trend-content.off
 	for item in mobileList
 		article.product-card
 			.product-img

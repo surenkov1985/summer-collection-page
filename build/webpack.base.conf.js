@@ -1,9 +1,11 @@
+
 const path = require('path')
 const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {VueLoaderPlugin} = require('vue-loader')
+const webpack = require('webpack')
 
 // Main const
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#main-const
@@ -29,7 +31,8 @@ module.exports = {
 		// module: `${PATHS.src}/your-module.js`,
 	},
 	output: {
-		filename: `${PATHS.assets}js/[name].[hash].js`,
+		// filename: `${PATHS.assets}js/[name].[hash].js`,
+		filename: `${PATHS.assets}js/[name].js`,
 		path: PATHS.dist,
 		publicPath: '/'
 	},
@@ -121,9 +124,18 @@ module.exports = {
 		}
 	},
 	plugins: [
+		new webpack.ProvidePlugin({
+			$: "jquery",
+			"$": "jquery",
+			"jQuery": "jquery",
+			"jquery": "jquery",
+			jQuery: "jquery",
+			jquery: "jquery",
+		}),
 		new VueLoaderPlugin(),
 		new MiniCssExtractPlugin({
-			filename: `${PATHS.assets}css/[name].[hash].css`,
+			// filename: `${PATHS.assets}css/[name].[hash].css`,
+			filename: `${PATHS.assets}css/[name].css`,
 		}),
 		new CopyWebpackPlugin([
 			{from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img`},

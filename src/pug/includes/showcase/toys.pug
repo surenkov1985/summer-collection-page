@@ -1,6 +1,7 @@
-- var toysList = [{class: "active", name: "Toys product one", image: "../assets/img/toys/toy-blank-1.png", price: "25.36"}, {class: "active", name: "Toys product two", image: "../assets/img/toys/toy-blank-2.png", price: "35.24"}, {class: "active", name: "Toys product three", image: "../assets/img/toys/toy-blank-3.png", price: "23.12"}, {class: "active", name: "Toys product four", image: "../assets/img/toys/toy-blank-4.png", price: "42.32"}, {class: "active", name: "Toys product five", image: "../assets/img/toys/toy-blank-5.png", price: "15.20"}, {class: "active", name: "Toys product six", image: "../assets/img/toys/toy-blank-6.png", price: "36.12"}];
+- var toysList = [{class: "active", name: "Toys product one", image: "/assets/img/toys/toy-blank-1.png", price: "25.36"}, {class: "active", name: "Toys product one", image: "/assets/img/toys/toy-blank-1.png", price: "35.24"}, {class: "active", name: "Toys product one", image: "/assets/img/toys/toy-blank-1.png", price: "23.12"}, {class: "active", name: "Toys product one", image: "/assets/img/toys/toy-blank-1.png", price: "42.32"}, {class: "active", name: "Toys product one", image: "/assets/img/toys/toy-blank-1.png", price: "15.20"}, {class: "active", name: "Toys product one", image: "/assets/img/toys/toy-blank-1.png", price: "36.12"}];
+- var category = "toys";
 
-.trend-content.toys.off
+div(id= category).trend-content.off
 	for item in toysList
 		article.product-card
 			.product-img

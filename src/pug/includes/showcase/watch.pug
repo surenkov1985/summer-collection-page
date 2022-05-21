@@ -1,6 +1,7 @@
-- var watchList = [{class: "active", name: "Fashion Genuine Chain Watch", image: "../assets/img/watch/fashion-genuine-chain.png", tab: "../assets/img/watch/fashion-genuine-chain-tab.png", link: " ", price: "25.36"}, {class: "active", name: "Fashion Silver Chain Watch", image: "../assets/img/watch/fashion-silver-chain.png", link: " ", price: "35.24"}, {class: "active", name: "Fashion Chain Watch", image: "../assets/img/watch/fashion-chain.png", link: " ", price: "23.12"}, {class: "active", name: "Fashion Black Chain Watch", image: "../assets/img/watch/fashion-black-chain.png", link: " ", price: "42.32"}, {class: "active", name: "Fashion Lether Watch", image: "../assets/img/watch/fashion-lether.png", link: " ", price: "15.20"}, {class: "active", name: "Fashion Forign Watch", image: "../assets/img/watch/fashion-forign.png", tab: "../assets/img/watch/fashion-forign-tab.png", link: " ", price: "36.12"}];
+- var watchList = [{class: "active", name: "Fashion Genuine Chain Watch", image: "/assets/img/watch/fashion-genuine-chain.png", tab: "/assets/img/watch/fashion-genuine-chain-tab.png", link: " ", price: "25.36"}, {class: "active", name: "Fashion Silver Chain Watch", image: "/assets/img/watch/fashion-silver-chain.png", link: " ", price: "35.24"}, {class: "active", name: "Fashion Chain Watch", image: "/assets/img/watch/fashion-chain.png", link: " ", price: "23.12"}, {class: "active", name: "Fashion Black Chain Watch", image: "/assets/img/watch/fashion-black-chain.png", link: " ", price: "42.32"}, {class: "active", name: "Fashion Lether Watch", image: "/assets/img/watch/fashion-lether.png", link: " ", price: "15.20"}, {class: "active", name: "Fashion Forign Watch", image: "/assets/img/watch/fashion-forign.png", tab: "/assets/img/watch/fashion-forign-tab.png", link: " ", price: "36.12"}];
+- var category = "watches";
 
-.trend-content.watches.on
+div(id= category).trend-content.on
 	for item in watchList
 		article.product-card
 			.product-img
