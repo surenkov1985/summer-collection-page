@@ -1,0 +1,22 @@
+block variables
+
+.burger-menu
+	.burger
+		.burger-button &#x2630
+		.burger-logo
+			p.logo Big Shop
+	.burger-search
+		.form-src
+			form(action="" method="post" target="_blank").source
+				input(type="image" src="/assets/img/search-icon.png").src-icon
+				input(type="search", placeholder="Search").button-src
+		.burger-drop
+			button.button-collection
+				.collection-desc Collection
+				.array
+					.button-array
+			.drop-menu
+					ul.drop-list
+						for key in dropMenu
+							li.drop-item
+								a(href= key.link).link= key.value

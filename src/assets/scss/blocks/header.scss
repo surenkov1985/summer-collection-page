@@ -4,6 +4,15 @@
 header {
 	width: 100%;
 	position: relative;
+	min-height: 700px;
+
+	@media (max-width: $desktopWidth) {
+		min-height: 500px;
+	}
+
+	@media (max-width: $smallWidth) {
+		margin-top: 70px;
+	}
 }
 
 .background {
@@ -14,19 +23,25 @@ header {
 	left: 0;
 	z-index: -1;
 }
-
 .bg-image {
 	position: relative;
 	width: 55%;
 	top: 55px;
 	background-size: contain;
 	background-repeat: no-repeat;
-	z-index: -1;
+	z-index: -2;
+
+	@media (max-width: $smallWidth) {
+		margin-top: 187px;
+		margin-left: auto;
+		width: 115%;
+		right: -6%;
+	}
 }
 .bg-gradient {
 	position: absolute;
 	width: 100%;
-	height: 1055px;
+	height: 100%;
 	max-height: 1055px;
 	top: 0;
 	background: linear-gradient(204.7deg, rgba(#aa55f3, 0.5) 27%, rgba(#1100ff, 0.5) 58%, transparent 58%);
@@ -35,11 +50,16 @@ header {
 }
 .bg-effects {
 	position: absolute;
-}
 
+	@media (max-width: $smallWidth) {
+		transform: scale(-1, 1);
+		width: 75%;
+		right: -10%;
+	}
+}
 .container {
 	position: absolute;
-	width: (1250 / 1600 * 100%);
+	width: 100%;
 	height: 100%;
 	padding: 80px 40px;
 	margin: 0 auto;
@@ -47,11 +67,21 @@ header {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	justify-content: center;
 	top: 0;
-	left: (174 / 1600 * 100%);
+
+	@media (max-width: $smallWidth) {
+		padding: 40px 7%;
+
+
+	}
 }
 .header-container {
-	width: 100%;
+	width: (1250 / 1600 * 100%);
+
+	@media (max-width: $desktopWidth) {
+		width: 100%;
+	}
 }
 .header-content {
 	display: flex;
@@ -62,25 +92,43 @@ header {
 	row-gap: 10%;
 	width: 44%;
 	margin-left: auto;
+
+	@media (max-width: $smDesktopWidth) {
+		//justify-content: flex-start;
+		row-gap: 0;
+	}
+
+	@media (max-width: $smallWidth) {
+		margin-left: 0;
+		justify-content: flex-start;
+	}
+
+	@media (max-width: $phoneWidth) {
+		row-gap: 0;
+	}
 }
 .header-logo-row {
 	display: flex;
 	justify-content: space-between;
-}
 
+	@media (max-width: $smallWidth) {
+		display: none;
+	}
+}
 .header-logo {
 	z-index: 5;
-}
-.logo {
-	font-size: 40px;
-	margin-top: -10px;
-	background-color: $default-color;
-	font-weight: 500;
-	font-family: "Roboto";
-	background: linear-gradient(312deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 21%, rgba(255,233,23,1) 24%, rgba(255,233,23,1) 42%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 59%, rgba(255,233,23,1) 62%, rgba(255,233,23,1) 79%, rgba(255,255,255,1) 81%, rgba(255,255,255,1) 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	display: inline-block;
+
+	.logo {
+		font-size: 40px;
+		margin-top: -10px;
+		background-color: $defaultColor;
+		font-weight: $mediumFontWeight;
+		font-family: $fontRoboto;
+		background: linear-gradient(312deg, rgba($defaultColor,1) 0%, rgba($defaultColor,1) 21%, rgba($logoGradient,1) 24%, rgba($logoGradient,1) 42%, rgba($defaultColor,1) 45%, rgba($defaultColor,1) 59%, rgba($logoGradient,1) 62%, rgba($logoGradient,1) 79%, rgba($defaultColor,1) 81%, rgba($defaultColor,1) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		display: inline-block;
+	}
 }
 .buttons {
 	display: flex;
@@ -90,14 +138,13 @@ header {
 .header-button {
 	display: flex;
 	align-items: center;
-	background: $default-color;
+	background: $defaultColor;
 	opacity: 1;
 	max-width: 550px;
 	border-radius: 35px;
 	box-shadow: 0 5px 25px 5px rgb(179, 158, 241);
 	padding: 12px;
 }
-
 .source {
 	display: flex;
 }
@@ -106,10 +153,11 @@ header {
 	position: relative;
 	border-right: 1px solid #e0e0e0;
 	background: none;
-	font-size: 18px;
-	font-weight: 600;
+	font-size: $mainFontSize;
+	font-weight: $semiBoldFontWeight;
 	padding: 1px 0;
-	color: black;
+	padding-right: 5px;
+	color: $borderButtonArray;
 	opacity: 1;
 
 	&:focus, &:active {
@@ -119,17 +167,33 @@ header {
 	&:focus::-webkit-input-placeholder {
 		color: transparent;
 	}
+	&:focus:-moz-placeholder {
+	color: transparent;
+	}
+	&:focus::-moz-placeholder {
+		color: transparent;
+	}
 }
 .button-array {
 	width: 10px;
 	height: 10px;
-	border-bottom: 2px solid black;
-	border-right: 2px solid black;
+	border-bottom: 2px solid $borderButtonArray;
+	border-right: 2px solid $borderButtonArray;
 	transform: rotate(45deg);
 }
 .src-icon {
 	margin-right: 5px;
-	padding: 7px 7px 7px 16px;
+	background: $defaultColor;
+	cursor: pointer;
+
+	&>svg {
+		width: 30px;
+
+	}
+
+	&>svg path {
+		stroke: #ffffff;
+	}
 }
 .src-desc {
 	padding-top: 10px;
@@ -141,23 +205,24 @@ header {
 }
 .button-collection {
 	position: relative;
-	min-width: 185px;
 	max-width: 250px;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 	background: none;
 	cursor: pointer;
+
+
 }
+
 .drop-menu {
 	position: absolute;
 	top: 160%;
-	background: $default-color;
-	box-shadow: 0px 5px 23.75px 1.25px rgba(189, 227, 239, 0.75);
+	background: $defaultColor;
+	box-shadow: 0px 5px 24px 1px rgba($buttonShadow , 0.75);
 	border-radius: 13px;
 	transform: scaleY(0);
 }
-
 .drop-list {
 	min-width: 185px;
 	max-width: 250px;
@@ -176,20 +241,21 @@ header {
 
 	a {
 		padding: 10px 15px;
-		font-size: 18px;
+		font-size: $mainFontSize;
 		width: 100%;
-		color: #404040;
+		color: $dropMenuItem;
 	}
 
 	&:hover {
-		color: #a165f4;
-		background: linear-gradient(237deg,#a165f4,#8c84f9 100%);
+		color: $purppleGragientColor;
+		background: linear-gradient(237deg, $purppleGragientColor, $violetGradientColor 100%);
 
 		a {
-			color: $default-color;
+			color: $defaultColor;
 		}
 	}
 }
+
 .collection-desc {
 	padding-left: 27px;
 	padding-top: 7px;
@@ -198,63 +264,119 @@ header {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	font-size: 18px;
-	font-weight: 600;
+	font-size: $mainFontSize;
+	font-weight: $semiBoldFontWeight;
 }
+.header-title {
 
+	@media (max-width: $smallWidth) {
+		margin-top: 15px;
+	}
+}
 
 h1.title {
-	font-family: "Roboto";
-	font-size: 115px;
+	font-family: $fontRoboto;
+	font-size: $headerTitleSize;
 	line-height: 120px;
-	font-weight: 700;
+	font-weight: $titleFontWeight;
 
+	@media (max-width: $desktopWidth) {
+		font-size: 90px;
+		line-height: 100%;
+	}
+	@media (max-width: $smDesktopWidth) {
+		font-size: 75px;
+		line-height:  79px;
+	}
 }
 p.sale {
-	font-family: "Roboto";
-	font-size: 50px;
-	font-weight:500;
+	font-family: $fontRoboto;
+	font-size: $titleFontSize;
+	font-weight:$mediumFontWeight;
+
+	@media (max-width: $smDesktopWidth) {
+		font-size: 32px;
+		margin-top: 5px;
+	}
 }
 .white-color {
-	color: $default-color;
+	color: $defaultColor;
 }
 .yellow-color {
 	color: #fbf934;
 }
-.details {
+.details-container {
+	position: relative;
 	min-width: 200px;
 	min-height: 60px;
-	font-family: "Open Sans";
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 13px 45px;
-	background-color: $default-color;
+	border-radius: 30px;
+
+	&::before {
+		content: '';
+		width: 10000px;
+		height: 2000px;
+		background: linear-gradient(rgba(#AA55F3, 0.5) 80%, rgba(#1100FF, 0.5) 100%);
+		position: absolute;
+		bottom: 130px;
+		transform: rotate(24.7deg);
+		z-index: -2;
+	}
+
+	@media (max-width: $smallWidth) {
+		margin-top:24px;
+		min-width: 200px;
+
+		&::before{
+			bottom: 0px;
+		}
+	}
+}
+.details {
+	min-width: 200px;
+	min-height: 60px;
+	font-family: $mainFont;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 13px 25px;
+	background-color: $defaultColor;
 	border-radius: 35px;
 	font-size: 20px;
-	font-weight: 600;
+	font-weight: $semiBoldFontWeight;
 	column-gap: 15px;
-	box-shadow: 0px 5px 25px 5px rgba(189, 227, 239, 0.6);
+	box-shadow: 0px 5px 25px 5px rgba($buttonShadow , 0.6);
 	cursor: pointer;
 	transition: all $transitionTime;
 
 	&:hover {
 		transform: scale(1.1);
-		color: #a165f4;
-		background: linear-gradient(237deg,#a165f4,#8c84f9 100%);
-		color: $default-color;
-		border: 1px solid #917df8;
+		color: $purppleGragientColor;
+		background: linear-gradient(237deg, $purppleGragientColor, $violetGradientColor 100%);
+		color: $defaultColor;
+		border: 1px solid $buttonBorderColor;
 	}
 
 	&:hover > .details-arrow path{
-		fill: $default-color;
+		fill: $defaultColor;
+	}
+
+	&:hover::before {
+		z-index: -10;
+	}
+
+	@media (max-width: $smallWidth){
+		min-width: 220px;
+		box-shadow: 0 5px 25px 5px #9687fe;
 	}
 }
 .details-arrow {
-	color: #7048e2;
-	width: 20px;
-}
+	 color: $detailsBorderColor;
+	 width: 20px;
+ }
 .details-arrow path {
-	fill: #7048e2;
+	fill: $detailsBorderColor;
 	transition: all $transitionTime;
 }

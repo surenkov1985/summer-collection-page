@@ -21,6 +21,18 @@ time, mark, audio, video {
 // Links
 a {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &:focus {
+    outline: none !important;
+  }
+
   &:active, &:hover {
     outline: 0;
   }
@@ -54,7 +66,23 @@ textarea {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
-input, textarea, select, button { outline: none; border: none; font-size: 100%; margin: 0;}
+input, textarea, select, button {
+  outline: none;
+  border: none;
+  font-size: 100%;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &:focus {
+    outline: none !important;
+  }
+}
 button, input { line-height: normal; }
 
 // Table

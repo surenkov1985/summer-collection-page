@@ -1,0 +1,142 @@
+
+block variables
+-
+    var showcasesBags = {
+        bags: {
+            list: [
+                {name: "Black Genuine Leather Bags", image: "/assets/img/bags/black-genuine.png", link: " ", price: "23.20"},
+                {name: "Fashion Red Leather Bags", image: "/assets/img/bags/fashion-red.png", link: " ", price: "20.16"},
+                {name: "Fashion Genuine Leather Bags", image: "/assets/img/bags/fashion-genuine.png", link: " ", price: "30.14"},
+                {name: "Simply Leather Bags", image: "/assets/img/bags/simply-leather.png", link: " ", price: "15.20"},
+                {name: "New Fashion Leather Bags", image: "/assets/img/bags/new-fashion.png", link: " ", price: "25.20"},
+                {name: "Simple Hand Model Bags", image: "/assets/img/bags/simple-hand.png", link: " ", price: "17.6"}
+            ]
+        }
+    };
+    var showcasesWatches = {
+        fashion: {
+            title: "Fashion",
+            list: [
+                {name: "Fashion product one", image: "/assets/img/fashion/fashion-blank-1.png", price: "25.36"},
+                {name: "Fashion product two", image: "/assets/img/fashion/fashion-blank-2.png", price: "35.24"},
+                {name: "Fashion product three", image: "/assets/img/fashion/fashion-blank-3.png", price: "23.12"},
+                {name: "Fashion product four", image: "/assets/img/fashion/fashion-blank-4.png", price: "42.32"},
+                {name: "Fashion product five", image: "/assets/img/fashion/fashion-blank-5.png", price: "15.20"},
+                {name: "Fashion product six", image: "/assets/img/fashion/fashion-blank-6.png", price: "36.12"}
+            ]
+        },
+        furnitures: {
+            title: "Furnitures",
+            list: [
+                {name: "Furnitures product one", image: "/assets/img/furnitures/furnitures-blank-1.png", price: "25.36"},
+                {name: "Furnitures product two", image: "/assets/img/furnitures/furnitures-blank-2.png", price: "35.24"},
+                {name: "Furnitures product three", image: "/assets/img/furnitures/furnitures-blank-3.png", price: "23.12"},
+                {name: "Furnitures product four", image: "/assets/img/furnitures/furnitures-blank-4.png", price: "42.32"},
+                {name: "Furnitures product five", image: "/assets/img/furnitures/furnitures-blank-5.png", price: "15.20"},
+                {name: "Furnitures product six", image: "/assets/img/furnitures/furnitures-blank-6.png", price: "36.12"}
+            ]
+        },
+        watches: {
+            title: "Watches",
+            list: [
+                {name: "Fashion Genuine Chain Watch", image: "/assets/img/watch/fashion-genuine-chain.png", link: " ", price: "25.36"},
+                {name: "Fashion Silver Chain Watch", image: "/assets/img/watch/fashion-silver-chain.png", link: " ", price: "35.24"},
+                {name: "Fashion Chain Watch", image: "/assets/img/watch/fashion-chain.png", link: " ", price: "23.12"},
+                {name: "Fashion Black Chain Watch", image: "/assets/img/watch/fashion-black-chain.png", link: " ", price: "42.32"},
+                {name: "Fashion Lether Watch", image: "/assets/img/watch/fashion-lether.png", link: " ", price: "15.20"},
+                {name: "Fashion Forign Watch", image: "/assets/img/watch/fashion-forign.png", link: " ", price: "36.12"}
+            ]
+        },
+        mobile: {
+            title: "Mobile",
+            list: [
+                {name: "Mobile product one", image: "/assets/img/mobile/mobile-blank-1.png", price: "25.36"},
+                {name: "Mobile product two", image: "/assets/img/mobile/mobile-blank-2.png", price: "35.24"},
+                {name: "Mobile product three", image: "/assets/img/mobile/mobile-blank-3.png", price: "23.12"},
+                {name: "Mobile product four", image: "/assets/img/mobile/mobile-blank-4.png", price: "42.32"},
+                {name: "Mobile product five", image: "/assets/img/mobile/mobile-blank-5.png", price: "15.20"},
+                {name: "Mobile product six", image: "/assets/img/mobile/mobile-blank-6.png", price: "36.12"}
+            ]
+        },
+        cloth: {
+            title: "Cloth",
+            list: [
+                {name: "Cloth product one", image: "/assets/img/cloth/cloth-blank-1.png", price: "25.36"},
+                {name: "Cloth product two", image: "/assets/img/cloth/cloth-blank-2.png", price: "35.24"},
+                {name: "Cloth product three", image: "/assets/img/cloth/cloth-blank-3.png", price: "23.12"},
+                {name: "Cloth product four", image: "/assets/img/cloth/cloth-blank-4.png", price: "42.32"},
+                {name: "Cloth product five", image: "/assets/img/cloth/cloth-blank-5.png", price: "15.20"},
+                {name: "Cloth product six", image: "/assets/img/cloth/cloth-blank-6.png", price: "36.12"}
+            ]
+        },
+        toys: {
+            title: "Toys",
+            list: [
+                {name: "Toys product 1", image: "/assets/img/toys/toy-blank-1.png", price: "25.36"},
+                {name: "Toys product fdh 2", image: "/assets/img/toys/toy-blank-1.png", price: "35.24"},
+                {name: "Toys pro 3", image: "/assets/img/toys/toy-blank-1.png", price: "23.12"},
+                {name: "Toys product sfds dsfdsfdsfds 4", image: "/assets/img/toys/toy-blank-1.png", price: "42.32"},
+                {name: "Toys 5", image: "/assets/img/toys/toy-blank-1.png", price: "15.20"},
+                {name: "Toys product dsafds 6", image: "/assets/img/toys/toy-blank-1.png", price: "36.12"}
+            ]
+        },
+    };
+
+    var title = 'Big Shop - Summer Collection';
+    var description = 'Description for Webpack + Pug';
+    var pageClass = 'index-page';
+
+    var dropMenu = [
+        {link: "", value: "Man"},
+        {link: "", value: "Woman"},
+        {link: "", value: "Kids"},
+        {link: "", value: "Bags"},
+        {link: "", value: "Watches"},
+        {link: "", value: "Toys"}
+    ];
+
+    var socialList = {
+        "facebook": {
+            name: "facebook",
+            link: "",
+            image: "<svg enable-background='new 0 0 32 32' version='1.1' viewBox='0 0 32 32' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g id='Flat_copy'><path d='M11.848,32h6.612V15.998h4.411l0.584-5.514H18.46l0.007-2.761c0-1.437,0.137-2.209,2.2-2.209h2.757V0h-4.412   c-5.299,0-7.164,2.675-7.164,7.174v3.311H8.545v5.515h3.303V32z'/></g></svg>"
+        },
+        "google-plus": {
+            name: "google-plus",
+            link: "",
+            image: "<?xml version='1.0' ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background='new 0 0 128 128' id='Social_Icons' version='1.1' viewBox='0 0 128 128' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g id='_x35__stroke'><g id='Google_Plus'><rect clip-rule='evenodd' fill='none' fill-rule='evenodd' height='128' width='128'/><path clip-rule='evenodd' d='M40.654,55.935v16.13    c0,0,15.619-0.021,21.979-0.021C59.189,82.5,53.834,88.194,40.654,88.194c-13.338,0-23.748-10.832-23.748-24.194    s10.41-24.194,23.748-24.194c7.052,0,11.607,2.483,15.784,5.944c3.344-3.35,3.065-3.828,11.573-11.877    c-7.222-6.586-16.822-10.6-27.357-10.6C18.201,23.273,0,41.507,0,64c0,22.493,18.201,40.727,40.654,40.727    c33.561,0,41.763-29.275,39.044-48.792H40.654z M113.912,56.742V42.628h-10.063v14.113H89.358v10.081h14.491v14.517h10.063V66.823    H128V56.742H113.912z' fill='#F93F2D' fill-rule='evenodd' id='Google_Plus_1_'/></g></g></svg>"
+        },
+        "instagram": {
+            name: "instagram",
+            link: "",
+            image:  "<?xml version='1.0' ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background='new 0 0 512 512' id='Layer_1' version='1.1' viewBox='0 0 512 512' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g><path d='M505,257c0,34.8-0.7,69.7,0.2,104.5c1.5,61.6-37.2,109.2-86.5,130.4c-19.8,8.5-40.6,13-62.1,13c-67.3,0.1-134.7,1-202-0.3   c-50.7-1-92.4-22.2-122.3-64c-15.7-22-23.2-47-23.2-74.1c0-71.7,0-143.3,0-215c0-58.5,28.5-99.4,79.1-126C110.2,14,134.1,9.1,159,9   c65.3,0,130.7-0.4,196,0.2c50.7,0.4,93,19.8,124.2,60.6c17.4,22.8,25.8,49,25.8,77.8C505,184,505,220.5,505,257z M46,257   c0,36.7,0,73.3,0,110c0,16.4,3.8,31.8,12.3,45.7c22.3,36.5,56,54.3,97.8,55c67.1,1,134.3,0.4,201.5,0.2c16.5,0,32.5-3.4,47.4-10.5   c40.6-19.4,63.3-50.3,63.1-96.7c-0.4-71-0.1-142-0.1-213c0-20.1-5.7-38.5-17.6-54.7c-23-31.1-54.8-46.4-92.8-46.8   c-67-0.8-134-0.3-201-0.2c-14.3,0-28.1,2.9-41.5,7.9c-36.8,13.7-71,48.4-69.4,99.5C46.9,188,46,222.5,46,257z'/><path d='M257.6,363c-64.5,0-116.5-51.4-116.6-115.4c-0.1-63,52.3-114.6,116.4-114.6c64.3-0.1,116.5,51.4,116.6,114.9   C374,311.3,321.9,362.9,257.6,363z M257.6,326c43.9,0,79.5-35.1,79.4-78.3c-0.1-42.8-35.7-77.8-79.4-77.8   c-43.9,0-79.7,34.9-79.7,78C178,291.1,213.7,326.1,257.6,326z'/><path d='M387.5,98c13.5,0,24.5,11.5,24.5,25.6c-0.1,14.1-11.2,25.5-24.7,25.4c-13.3-0.1-24.2-11.5-24.2-25.3   C363,109.6,374,98,387.5,98z'/></g></svg>"
+        },
+        "twitter": {
+            name: "twitter",
+            link: "",
+            image: "<?xml version='1.0' ?><svg enable-background='new 0 0 32 32' version='1.1' viewBox='0 0 32 32' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g id='Flat_copy'><path d='M20.046,3.071c-2.89,1.052-4.716,3.764-4.509,6.732l0.07,1.145l-1.156-0.14c-4.207-0.537-7.884-2.36-11.006-5.423   L1.919,3.866L1.526,4.988c-0.832,2.501-0.3,5.143,1.433,6.92c0.925,0.982,0.716,1.122-0.878,0.537   c-0.555-0.186-1.041-0.327-1.087-0.257c-0.161,0.164,0.393,2.291,0.832,3.133c0.601,1.17,1.826,2.314,3.168,2.993l1.133,0.537   l-1.341,0.023c-1.294,0-1.341,0.023-1.202,0.515c0.462,1.519,2.289,3.133,4.323,3.834l1.433,0.49l-1.248,0.748   c-1.849,1.077-4.023,1.684-6.197,1.729C0.855,26.213,0,26.307,0,26.378c0,0.233,2.821,1.541,4.462,2.057   c4.925,1.519,10.775,0.864,15.168-1.73c3.122-1.847,6.242-5.517,7.7-9.071c0.787-1.892,1.572-5.353,1.572-7.011   c0-1.076,0.07-1.216,1.364-2.501c0.764-0.748,1.48-1.566,1.619-1.8c0.232-0.445,0.207-0.445-0.971-0.047   c-1.965,0.702-2.243,0.608-1.271-0.444c0.716-0.748,1.572-2.104,1.572-2.501c0-0.07-0.346,0.046-0.74,0.257   C30.059,3.819,29.134,4.17,28.44,4.38l-1.248,0.398l-1.133-0.772c-0.625-0.42-1.502-0.888-1.965-1.028   C22.914,2.651,21.11,2.697,20.046,3.071z'/></g></svg>"
+        }
+    };
+
+    var emergeList = [
+    {
+    name: "Details",
+    link: "#head"
+    },
+    {
+    name:"Trentdy Arrivals",
+    link: "#trendly-bags"
+    },
+    {
+    name:"Our Brands",
+    link: "#presentation"
+    },
+    {
+    name:"Our Showcase",
+    link: "#trendly-watch"
+    },
+    {
+    name:"Newsletter",
+    link: "#foot"
+    }
+    ];

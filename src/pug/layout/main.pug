@@ -1,21 +1,26 @@
-include ../utils/mixins
+
 block variables
 
 doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0")
+    //- title #{title}
     title #{title}
     meta(name="description", content=description)
     block head
+  body
+    #app(style="box-sizing: border-box; padding: 0; margin: 0;")
+      .wrapper(style="width: 100%; box-sizing: border-box; padding: 0; margin: 0;")
+        include ../includes/modules/burger-menu
+        include ../includes/modules/header
+        include ../includes/modules/emerge-menu
+        main.content-wrapper
+          block contentBags
+          block brands-presentation
+          block contentWatch
+        include ../includes/modules/footer
 
-  body(class=pageClass)
-    .wrapper
-      include ../includes/modules/header
-      main.content-wrapper
-        block contentBags
-        block brands-presentation
-        block contentWatch
-      include ../includes/modules/footer
 
-    //block script
+

@@ -1,0 +1,148 @@
+
+/////////////////////
+//  Product card   //
+/////////////////////
+
+.product-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	transition: all $transitionTime;
+
+	&:hover {
+		box-shadow: 0px 5px 48px 3px rgba(221, 223, 224, 0.7);
+		z-index: 10;
+	}
+	&:hover>button {
+		opacity: 1;
+		transition: all $transitionTime;
+	}
+
+	@media (max-width: $smallWidth) {
+		//margin-bottom: 25%;
+	}
+}
+.card-content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 56px 30px;
+	background-color: transparent;
+	position: relative;
+	transition: all $transitionTime;
+
+	&:hover {
+		transform: translateY(-6px);
+	}
+
+	&:hover>.likes, &:hover>.commits {
+		opacity: 1;
+		transition: all $transitionTime;
+	}
+
+	&:hover>.product-price {
+		color: $violetGradientColor;
+	}
+
+	@media (max-width: $smallWidth) {
+		padding: 55px 10px 35px;
+	}
+}
+.product-img {
+	display: flex;
+	justify-content: center;
+
+	img {
+		object-fit: contain;
+	}
+}
+.product-name {
+	text-align: center;
+	color: $productNameColor;
+	margin-top: 23px;
+}
+.product-price {
+	text-align: center;
+	color: $trendTitleColor;
+	font-size: 25px;
+	font-weight: 500;
+	margin-top: 5px;
+}
+.add-to-cart {
+	opacity: 0;
+	position: absolute;
+	height: 60px;
+	min-width: 100px;
+	max-width: 250px;
+	padding: 0 50px;
+	border-radius: 30px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 20px;
+	color: $defaultColor;
+	background: linear-gradient(64deg, $violetGradientColor, $purppleGragientColor 100%);
+	bottom: -30px;
+	cursor: pointer;
+	box-shadow: 0px 5px 25px 2px rgba(240, 239, 254, 0.7);
+
+	@media (max-width: 600px) {
+		height: 50px;
+		padding: 0 35px;
+		font-size: 18px;
+		bottom: -25px;
+	}
+}
+.content-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.likes {
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $commitNumbColor;
+	font-size: 14px;
+	column-gap: 5px;
+	cursor: pointer;
+	padding-left:inherit;
+	padding-top: 30px;
+
+	@media (max-width: $smallWidth) {
+		padding: 20px;
+	}
+}
+.likes-icon {
+	width: 20px;
+	height: 20px;
+	fill: $likeIconColor;
+	stroke: $likeIconColor;
+}
+.commits {
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $commitNumbColor;
+	font-size: 14px;
+	column-gap: 5px;
+	cursor: pointer;
+	padding-right: inherit;
+	padding-top: 30px;
+
+	@media (max-width: $smallWidth) {
+		padding: 20px;
+	}
+}

@@ -1,0 +1,7 @@
+mixin showcase(name, showcasesData)
+
+	include product-card
+
+	div(id= name).trend-content.on
+		for item in showcasesData[name].list
+			+productCard(item)

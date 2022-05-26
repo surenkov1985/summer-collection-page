@@ -1,0 +1,88 @@
+.burger-menu {
+	width: 100%;
+	min-height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: $defaultColor;
+	position: fixed;
+	top: -2px;
+	left: 0;
+	z-index: 20;
+	box-shadow: 0px 5px 48px 3px rgba(221, 223, 224, 0.7);
+	display: none;
+
+	@media (max-width: $smallWidth) {
+		display: flex;
+	}
+}
+.burger {
+	display: flex;
+	column-gap: 25px;
+}
+.burger-button {
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 40px;
+	font-weight: 900;
+	cursor: pointer;
+}
+.burger-search {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	column-gap: 10px;
+	margin-right: 10px;
+
+	.button-src {
+		display: none;
+	}
+	.src-icon {
+		padding: 15px 10px;
+	}
+
+	.button-collection {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $defaultColor;
+		cursor: pointer;
+		border-left: 1px solid #e0e0e0;
+
+		.collection-desc {
+			padding: 10px;
+			font-size: 20px;
+			font-weight: 400;
+		}
+		.array {
+			padding: 10px;
+		}
+	}
+}
+.burger-drop {
+	height: 100%;
+	position: relative;
+	display: flex;
+
+	.drop-menu {
+		position: absolute;
+		right: 5px;
+	}
+}
+.burger-logo {
+	display: flex;
+	align-items: center;
+
+	.logo {
+		background-color: $borderButtonArray;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		display: inline-block;
+		font-size: 28px;
+		font-weight: $mediumFontWeight;
+		font-family: $fontRoboto;
+	}
+}

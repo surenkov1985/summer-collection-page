@@ -2,9 +2,13 @@
 	display: flex;
 	justify-content: center;
 	column-gap: 30px;
+
+	@media (max-width: $smallWidth) {
+		column-gap: 20px;
+	}
 }
 .social-item {
-	width: 55px;
+	min-width: 55px;
 	height: 55px;
 	display: flex;
 	justify-content: center;
@@ -28,7 +32,6 @@
 			fill: #555555;
 			transition: all $transitionTime;
 		}
-
 	}
 	#facebook > svg {
 		width: 25px;
@@ -48,13 +51,13 @@
 	}
 
 	&:hover {
-		background: linear-gradient(237deg, rgb(161, 101, 244), rgb(140, 132, 249) 100%);
+		background: linear-gradient(237deg, $purppleGragientColor, $violetGradientColor 100%);
 		box-shadow: 0px 8px 19px 1px rgba(207, 207, 208, 0.75);
-		border-color: #917df8;
+		border-color: $buttonBorderColor;
 		transform: scale(1.1);
 
 		svg path {
-			fill: #ffffff;
+			fill: $defaultColor;
 		}
 	}
 }

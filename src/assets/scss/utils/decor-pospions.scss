@@ -9,6 +9,13 @@
 	background: url("/assets/img/white-ring.png");
 	top: (181 / 994 * 100%);
 	left: (843 / 1600 * 100%);
+
+	@media (max-width: $smallWidth) {
+		top: 250px;
+		left: 53%;
+		transform: scale(0.7);
+
+	}
 }
 .bg-quad {
 	position: absolute;
@@ -17,6 +24,10 @@
 	height: 41px;
 	top: (739 / 994 * 100%);
 	right: (100 / 1600 * 100%);
+
+	@media (max-width: $smallWidth) {
+		right: -20%;
+	}
 }
 
 /////////////////////////
@@ -172,7 +183,7 @@
 	background: url("/assets/img/violet-quad-light.png");
 	background-repeat: no-repeat;
 	background-size: contain;
-	top: (476 / 1352.38 * 100%);
+	top: 476px;
 	right: -(15 / 1380 * 100%);
 }
 .triangle-small-shape {
@@ -182,7 +193,7 @@
 	background: url("/assets/img/triangle-small-shape.png");
 	background-repeat: no-repeat;
 	background-size: contain;
-	top: (868 / 1352.38 * 100%);
+	top: 868px;
 	left: -(58 / 1380 * 100%);
 }
 .violet-small-ring {
@@ -192,7 +203,7 @@
 	background: url("/assets/img/violet-small-ring.png");
 	background-repeat: no-repeat;
 	background-size: contain;
-	top: (250 / 1352.38 * 100%);
+	top: 250px;
 	left: (123 / 1380 * 100%);
 }
 
