@@ -1,4 +1,5 @@
 Вёрстка.
+
 Учебный проект на основе задания: https://github.com/fugr-ru/frontend-html-2
 
 [Демо](https://mich-man.ru/projects/summer-collection/)
