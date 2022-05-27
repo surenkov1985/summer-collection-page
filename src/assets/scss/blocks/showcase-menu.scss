@@ -18,7 +18,7 @@
 	width: 85%;
 	min-height: 65px;
 	display: grid;
-	grid-template-columns: repeat(6 , auto);
+	grid-template-columns: repeat(auto-fit, minmax(150px, auto));
 
 	@media (max-width: $smallWidth) {
 		grid-template-columns: repeat(3 , auto);

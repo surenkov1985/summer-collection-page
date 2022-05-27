@@ -94,10 +94,6 @@
 	font-size: 20px;
 	font-family: $mainFont;
 	margin-top: 20px;
-
-	@media (max-width: $smallWidth) {
-		//display: flex;
-	}
 }
 
 .email {

@@ -1,5 +1,5 @@
 mixin socialLink(name)
 
 	.social-item 
-		a(id= name href= socialList[name]["link"] target="_blank")
+		a(class= name href= socialList[name]["link"] target="_blank")
 			| !{socialList[name]["image"]}		

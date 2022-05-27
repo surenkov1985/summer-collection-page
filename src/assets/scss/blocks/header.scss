@@ -175,6 +175,7 @@ header {
 	}
 }
 .button-array {
+	display: block;
 	width: 10px;
 	height: 10px;
 	border-bottom: 2px solid $borderButtonArray;
@@ -203,6 +204,9 @@ header {
 .array {
 	padding: 7px;
 }
+.header-drop {
+	position: relative;
+}
 .button-collection {
 	position: relative;
 	max-width: 250px;
@@ -218,6 +222,7 @@ header {
 .drop-menu {
 	position: absolute;
 	top: 160%;
+	right: 0;
 	background: $defaultColor;
 	box-shadow: 0px 5px 24px 1px rgba($buttonShadow , 0.75);
 	border-radius: 13px;

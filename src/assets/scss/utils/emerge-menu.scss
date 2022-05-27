@@ -87,8 +87,6 @@
 	cursor: pointer;
 	border-radius: 10px;
 
-
-
 	&:hover {
 		background: $defaultColor;
 		box-shadow: 0px 8px 19px 1px rgba(207, 207, 208, 0.75);
@@ -98,14 +96,12 @@
 		color: $purppleGragientColor;
 	}
 
-
 	a {
 		color: $defaultColor;
 		font-size: 20px;
 		font-weight: 600;
 		padding: 10px 40px 10px 0px;
 	}
-
 }
 .closed-menu {
 	position: absolute;
