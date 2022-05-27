@@ -1,8 +1,9 @@
-Учебный проект по заданию:
-https://github.com/fugr-ru/frontend-html-2
+Вёрстка.
+Учебный проект на основе задания: https://github.com/fugr-ru/frontend-html-2
 
 [Демо](https://mich-man.ru/projects/summer-collection/)
 
+- верстка по шаблону .psd
 - изучение препроцессоров pug и scss
 - использование семантических тегов
 - использование flexbox и grid
