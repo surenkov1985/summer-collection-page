@@ -2,6 +2,7 @@
 https://github.com/fugr-ru/frontend-html-2
 
 Демо
+https://mich-man.ru/projects/summer-collection/
 
 - изучение препроцессоров pug и scss
 - создание адаптивной верстки без дополнительных шаблонов
