@@ -4,6 +4,7 @@ const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlReplaceWebpackPlugin = require('html-replace-webpack-plugin')
 const {VueLoaderPlugin} = require('vue-loader')
 const webpack = require('webpack')
 
@@ -34,7 +35,7 @@ module.exports = {
 		// filename: `${PATHS.assets}js/[name].[hash].js`,
 		filename: `${PATHS.assets}js/[name].js`,
 		path: PATHS.dist,
-		publicPath: '/'
+		publicPath: ''
 	},
 	optimization: {
 		splitChunks: {
@@ -92,6 +93,14 @@ module.exports = {
 				'style-loader',
 				MiniCssExtractPlugin.loader,
 				{
+					loader: 'string-replace-loader',
+					options: {
+						multiple: [
+							{ search: '/assets/', replace: 'assets/' },
+						]
+					}
+				},
+				{
 					loader: 'css-loader',
 					options: {sourceMap: true}
 				}, {
@@ -135,7 +144,7 @@ module.exports = {
 		new VueLoaderPlugin(),
 		new MiniCssExtractPlugin({
 			// filename: `${PATHS.assets}css/[name].[hash].css`,
-			filename: `${PATHS.assets}css/[name].css`,
+			filename: `[name].[hash].css`,
 		}),
 		new CopyWebpackPlugin([
 			{from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img`},
